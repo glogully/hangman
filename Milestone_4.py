@@ -10,10 +10,7 @@ class Hangman:
         self.list_of_guesses = []
 
     def check_guess(self, guess):
-<<<<<<< HEAD
-=======
         """Check if the guessed letter is in the word."""
->>>>>>> Update5
         processed_guess = guess.lower()
         
         if processed_guess in self.list_of_guesses:
@@ -40,10 +37,7 @@ class Hangman:
             return False
     
     def ask_for_input(self):
-<<<<<<< HEAD
-=======
         """Keep asking the user for input until a valid single alphabetical character is entered."""
->>>>>>> Update5
         while self.num_lives > 0 and self.num_letters > 0:
             print(' '.join(self.word_guessed))  
             guess = input("Please enter a single letter: ")
@@ -54,28 +48,6 @@ class Hangman:
             else:
                 print("Invalid letter. Please, enter a single alphabetical character.")
 
-<<<<<<< HEAD
-
-def play_game(word_list):
-    num_lives = 5
-    game = Hangman(word_list, num_lives)
-    
-    while True:
-        if game.num_lives == 0:
-            print("You lost!")
-            break
-        if game.num_letters > 0:
-            game.ask_for_input()
-        if game.num_lives != 0 and game.num_letters == 0:
-            print("Congratulations. You won the game!")
-            break
-
-
-def main():
-    word_list = ["Pineapple", "Pear", "Mango", "Banana", "Orange"]
-    print("Word List:", word_list)
-    play_game(word_list)
-=======
         if self.num_letters == 0:
             print("Congratulations! You've guessed the word:", ' '.join(self.word_guessed))
         else:
@@ -89,7 +61,6 @@ def main():
 
     hangman_game = Hangman(word_list)
     hangman_game.ask_for_input()
->>>>>>> Update5
 
 
 if __name__ == "__main__":
